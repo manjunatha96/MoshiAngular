@@ -1,0 +1,31 @@
+<div class="container content" align="center">
+    <h2 class="mt-1">User Details List</h2>
+  <div class="row" align="center">            
+    <div class="col"> 
+      <h3 style="font-weight:bold">Sl no.</h3>    
+    </div>
+    <div class="col"> 
+      <h3 style="font-weight:bold">Full Name</h3>    
+    </div>
+    <div class="col"> 
+      <h3 style="font-weight:bold">Gender</h3>    
+    </div>
+    <div class="col"> 
+      <h3 style="font-weight:bold">Email</h3>    
+    </div>
+  </div>
+  <div class="row" *ngFor="let user of logData;let i=index" align="center">
+      <div class="col"> 
+          <h3>{{i+1}}</h3>    
+      </div>
+      <div class="col"> 
+          <h3>{{user.full_name}}</h3>    
+      </div>
+      <div class="col"> 
+        <h3>{{user.gender}}</h3>    
+    </div>
+    <div class="col"> 
+        <h3>{{user.email}}</h3>    
+    </div>
+  </div>
+</div>
