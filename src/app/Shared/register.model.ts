@@ -3,5 +3,6 @@ export class Register {
     gender:String;
     email:String;
     password:String;
+    token:string;
 }
 
