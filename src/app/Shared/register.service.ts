@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Register } from './register.model';
 import { Router } from '@angular/router';
@@ -13,6 +13,8 @@ export class RegisterService {
   baseUrl='http://localhost:3000'
   postRegistertation(register):Observable<Register>{
     console.log('register data',register)
+    let authenticatedHeader = new HttpHeaders();
+    authenticatedHeader = authenticatedHeader.set('X1-login', 'application/json');
     return this.http.post<Register>( `${this.baseUrl}/register/post`,register)
   }
   
